@@ -28,7 +28,7 @@ function Createnew2()
     {
         e.preventDefault();
         const response=await axios.post(
-            "http://localhost:5000/api/auth/signup2",formData
+            "https://mern-backend-5ek0.onrender.com/api/auth/signup2",formData
         );
         alert(response.data.message);
         if(response.data.success)

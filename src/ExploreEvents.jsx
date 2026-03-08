@@ -18,7 +18,7 @@ function ExploreEvents()
         const user=JSON.parse(storedUser);
         const fetchEvents=async ()=>
         {
-            const response=await axios.get(`http://localhost:5000/api/comp/all`);
+            const response=await axios.get(`https://mern-backend-5ek0.onrender.com/api/comp/all`);
             setEvents(response.data.events);
             setLoading(false);
         }
@@ -29,7 +29,7 @@ function ExploreEvents()
     {
         const storeduser=localStorage.getItem("loggedInUser2");
         const user=JSON.parse(storeduser);
-        await axios.post(`http://localhost:5000/api/comp/participate/${eventId}`,
+        await axios.post(`https://mern-backend-5ek0.onrender.com/api/comp/participate/${eventId}`,
             {
                 pid:user.userid,
                 email:user.emailid,

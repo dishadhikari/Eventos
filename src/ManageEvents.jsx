@@ -17,7 +17,7 @@ function ManageEvents()
         const user=JSON.parse(storedUser);
         const fetchEvents=async ()=>
         {
-            const response=await axios.get(`http://localhost:5000/api/comp/organizer/${user.userid}`);
+            const response=await axios.get(`https://mern-backend-5ek0.onrender.com/api/comp/organizer/${user.userid}`);
             setEvents(response.data.events);
             setLoading(false);
         }

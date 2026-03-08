@@ -17,9 +17,11 @@ mongoose.connect(
 .catch(err=>console.log(err));
 
 app.get("/",(req,res)=>{
-    res.json("Server is running on port 5000");
+    res.json("Server is running ");
 });
+
+const PORT = process.env.PORT || 5000;
 app.listen(5000,()=>    
 {
-    console.log("Sever is running on the port succesfully");
+    console.log(`Sever is running on the port ${PORT}`);
 });

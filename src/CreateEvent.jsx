@@ -57,7 +57,7 @@ function CreateEvent()
         };
         console.log(payload);
         const response=await axios.post(
-            "http://localhost:5000/api/comp/create",
+            "https://mern-backend-5ek0.onrender.com/api/comp/create",
             payload
         );
         alert(response.data.message);
